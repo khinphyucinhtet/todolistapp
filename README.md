@@ -4,7 +4,7 @@ Your Best Reminder App is a responsive Vanilla JavaScript reminder and to-do lis
 
 The app can run locally with VS Code Live Server and is ready to host as a static site on Vercel.
 
-Vercel Link : https://todolistapp-vert-kappa.vercel.app/
+Vercel Link: https://todolistapp-vert-kappa.vercel.app/
 
 ## Quick Start
 
@@ -26,7 +26,7 @@ Vercel setup:
 5. Output directory: leave empty or use project root.
 6. Deploy.
 
-Important: Keep `vercel.json` in the root folder so `/` redirects to the splash screen.
+Important: Keep `vercel.json` in the root folder so `/` opens the splash screen.
 
 ## Files
 
@@ -104,6 +104,14 @@ Each task supports:
 }
 ```
 
+## Responsive Design
+
+The layout is mobile-first. On desktop, the app is centered inside a phone-like container. On phones, the app fills the visible screen and keeps the bottom navigation visible.
+
+The CSS uses `100dvh` on mobile so real browser address bars and bottom bars do not push the footer off-screen. The content scrolls inside the app frame, while the header and bottom navigation stay in place.
+
+Home cards stay in a two-column layout on normal phone widths and only collapse to one column on very small screens.
+
 ## Do
 
 - Open the app from `splashscreen.html` locally.
@@ -120,7 +128,3 @@ Each task supports:
 - Do not move JavaScript into individual HTML pages.
 - Do not remove `vercel.json` if deploying to Vercel without `index.html`.
 - Do not store private or sensitive user data in `localStorage`.
-
-## Responsive Design
-
-The layout is mobile-first. On desktop, the app is centered inside a phone-like container. On smaller screens, it fills the available screen width.
