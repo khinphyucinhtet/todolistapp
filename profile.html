@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="profile">
+    <main class="app-frame">
+      <section class="screen">
+        <header class="app-header">
+          <a class="header-link" href="home.html" aria-label="Back">←</a>
+          <span class="header-title">Profile</span>
+          <span class="header-link" aria-hidden="true">👤</span>
+        </header>
+
+        <div class="screen-content" data-profile-root data-profile-mode="view">
+          <section class="profile-form-card" data-profile-form-panel>
+            <h2 class="overview-section-title" data-profile-form-title>Create Profile</h2>
+            <form id="profile-form">
+              <div class="field-group">
+                <label class="field-label" for="profile-name">Full Name</label>
+                <input class="input-control" id="profile-name" type="text" placeholder="Your full name" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="profile-email">Email</label>
+                <input class="input-control" id="profile-email" type="email" placeholder="your@email.com" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="profile-type">Student / User Type</label>
+                <input class="input-control" id="profile-type" type="text" placeholder="Student, Developer, Planner..." />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="profile-bio">Short Bio</label>
+                <textarea class="textarea-control" id="profile-bio" placeholder="Tell us a little about yourself"></textarea>
+              </div>
+
+              <button class="primary-button" type="submit">Save Profile</button>
+            </form>
+          </section>
+
+          <section data-profile-card-panel></section>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Bottom navigation">
+          <a class="nav-item" data-nav="home" href="home.html">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-nav="lists" href="view_list.html">
+            <span class="nav-icon" aria-hidden="true">☷</span>
+            <span>Lists</span>
+          </a>
+          <a class="nav-item" data-nav="calendar" href="calendar.html">
+            <span class="nav-icon" aria-hidden="true">🗓</span>
+            <span>Calendar</span>
+          </a>
+          <a class="nav-item" data-nav="profile" href="profile.html">
+            <span class="nav-icon" aria-hidden="true">👤</span>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

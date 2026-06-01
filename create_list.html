@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Create New List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="create">
+    <main class="app-frame">
+      <section class="screen">
+        <header class="app-header">
+          <a class="header-link" href="home.html" aria-label="Back">←</a>
+          <span class="header-title">Create New List</span>
+          <span class="header-link" aria-hidden="true">💾</span>
+        </header>
+
+        <div class="screen-content">
+          <form id="create-task-form" class="form-card">
+            <div class="field-group">
+              <label class="field-label" for="create-title">List Title</label>
+              <input class="input-control" id="create-title" type="text" placeholder="e.g. Daily Tasks" required />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="create-description">Description <span>(Optional)</span></label>
+              <textarea
+                class="textarea-control"
+                id="create-description"
+                maxlength="100"
+                placeholder="Add a short description..."
+                data-description-input
+                data-counter-id="create-description-count"
+              ></textarea>
+              <div class="char-counter" id="create-description-count">0/100</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="create-due-date">Due Date <span>(Optional)</span></label>
+              <input class="date-control" id="create-due-date" type="date" />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="create-category">Category</label>
+              <select class="select-control" id="create-category">
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Work">Work</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <div class="section-label">Priority Level</div>
+              <div class="priority-panel" data-priority-group>
+                <input type="hidden" id="create-priority-input" data-priority-input value="Emergency" />
+
+                <label class="priority-option selected" data-priority="Emergency">
+                  <input type="radio" name="create-priority" value="Emergency" checked />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--red)"></span>
+                    <span class="priority-copy">
+                      <strong>Emergency</strong>
+                      <span>Highest priority - Do it now</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Very Urgent">
+                  <input type="radio" name="create-priority" value="Very Urgent" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--orange)"></span>
+                    <span class="priority-copy">
+                      <strong>Very Urgent</strong>
+                      <span>Important - Do it soon</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Moderate">
+                  <input type="radio" name="create-priority" value="Moderate" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--yellow)"></span>
+                    <span class="priority-copy">
+                      <strong>Moderate</strong>
+                      <span>Medium priority - Plan it</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i class="filled"></i><i></i><i></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Low">
+                  <input type="radio" name="create-priority" value="Low" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--green)"></span>
+                    <span class="priority-copy">
+                      <strong>Low</strong>
+                      <span>Not too urgent - Do it later</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i></i><i></i><i></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Very Low">
+                  <input type="radio" name="create-priority" value="Very Low" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--teal)"></span>
+                    <span class="priority-copy">
+                      <strong>Very Low</strong>
+                      <span>Whenever possible</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i></i><i></i><i></i><i></i>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <button class="primary-button" type="submit">Create List</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

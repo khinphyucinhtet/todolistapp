@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <main class="app-frame">
+      <section class="screen">
+        <header class="app-header">
+          <button class="header-icon" type="button" data-sidebar-open aria-label="Open menu">☰</button>
+          <span class="header-title">Home</span>
+          <div class="header-actions">
+            <button class="header-icon" type="button" data-home-search-toggle aria-label="Search tasks">⌕</button>
+            <a class="header-link" href="notifications.html" aria-label="Notifications">
+              <span class="icon-stack">
+                <span aria-hidden="true">🔔</span>
+                <span class="notif-badge hidden" data-notification-badge>0</span>
+              </span>
+            </a>
+          </div>
+        </header>
+
+        <section class="home-search-panel hidden" data-home-search-panel>
+          <div class="home-search-box">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" data-home-search-input placeholder="Search all tasks..." aria-label="Search all tasks" />
+          </div>
+          <div class="home-search-results" data-home-search-results></div>
+        </section>
+
+        <div class="screen-content">
+          <section class="hero-greeting home-hero-grid">
+            <div>
+              <p class="time-greeting" data-time-greeting>Good day</p>
+              <h1 data-home-greeting>Hello, Guest! 👋</h1>
+              <p>Stay organized, stay productive.</p>
+              <a class="profile-register-link" href="profile.html">Register or log in to see your progress.</a>
+            </div>
+            <a class="home-avatar-link" href="profile.html" aria-label="Open profile">
+              <span data-home-avatar>🙂</span>
+            </a>
+          </section>
+
+          <section class="home-progress-card" data-home-progress></section>
+
+          <section class="mini-stat-grid" aria-label="Personal stats">
+            <a class="mini-stat-card" href="profile.html">
+              <span class="mini-stat-icon">🔥</span>
+              <strong data-home-streak>0</strong>
+              <small>days streak</small>
+            </a>
+            <a class="mini-stat-card" href="profile.html">
+              <span class="mini-stat-icon">🏆</span>
+              <strong data-home-badges>0</strong>
+              <small>badges earned</small>
+            </a>
+          </section>
+
+          <section class="home-section-head">
+            <h2>Categories <span>(Active Tasks)</span></h2>
+            <a href="view_list.html">View All</a>
+          </section>
+          <section class="category-grid" data-home-categories></section>
+
+          <section class="motivation-card" data-motivation-card></section>
+
+          <section class="home-section-head">
+            <h2>Recently Completed</h2>
+            <a href="completed_tasks.html">View All</a>
+          </section>
+          <section class="recent-completed-card hidden" data-recent-completed></section>
+
+          <section class="dashboard-grid" aria-label="Main actions">
+            <a class="feature-card card-blue" href="create_list.html">
+              <div class="card-icon-row">
+                <span class="card-emoji" aria-hidden="true">📋</span>
+              </div>
+              <div class="card-text">
+                <h3>Create New List</h3>
+                <p>Start a new<br />to-do list</p>
+                <span class="card-count-badge" data-home-card-create>Tap to add</span>
+              </div>
+              <div class="card-footer">
+                <span></span>
+                <span class="card-arrow arrow-blue" aria-hidden="true">→</span>
+              </div>
+            </a>
+
+            <a class="feature-card card-yellow" href="view_list.html">
+              <div class="card-icon-row">
+                <span class="card-emoji" aria-hidden="true">📝</span>
+              </div>
+              <div class="card-text">
+                <h3>Current To-Do</h3>
+                <p>View your tasks</p>
+                <span class="card-count-badge" data-home-card-active>0 active</span>
+              </div>
+              <div class="card-footer">
+                <span></span>
+                <span class="card-arrow arrow-yellow" aria-hidden="true">→</span>
+              </div>
+            </a>
+
+            <a class="feature-card card-green" href="overview.html">
+              <div class="card-icon-row">
+                <span class="card-emoji" aria-hidden="true">🟢</span>
+              </div>
+              <div class="card-text">
+                <h3>Task Overview</h3>
+                <p>Monitor progress</p>
+                <span class="card-count-badge" data-home-card-total>0 total</span>
+              </div>
+              <div class="card-footer">
+                <span></span>
+                <span class="card-arrow arrow-green" aria-hidden="true">→</span>
+              </div>
+            </a>
+
+            <a class="feature-card card-gray" href="completed_tasks.html">
+              <div class="card-icon-row">
+                <span class="card-emoji" aria-hidden="true">⚑</span>
+              </div>
+              <div class="card-text">
+                <h3>Completed Tasks</h3>
+                <p>See what you&apos;ve done</p>
+                <span class="card-count-badge" data-home-card-completed>0 done</span>
+              </div>
+              <div class="card-footer">
+                <span></span>
+                <span class="card-arrow arrow-black" aria-hidden="true">→</span>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Bottom navigation">
+          <a class="nav-item" data-nav="home" href="home.html">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-nav="lists" href="view_list.html">
+            <span class="nav-icon" aria-hidden="true">☷</span>
+            <span>Lists</span>
+          </a>
+          <a class="nav-item" data-nav="calendar" href="calendar.html">
+            <span class="nav-icon" aria-hidden="true">🗓</span>
+            <span>Calendar</span>
+          </a>
+          <a class="nav-item" data-nav="profile" href="profile.html">
+            <span class="nav-icon" aria-hidden="true">👤</span>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </section>
+
+      <div class="sidebar-overlay hidden" data-sidebar-overlay></div>
+      <aside class="sidebar-panel" data-sidebar aria-hidden="true">
+        <div class="sidebar-head">
+          <h2>Your Best Reminder App</h2>
+          <button class="sidebar-close" type="button" data-sidebar-close aria-label="Close menu">×</button>
+        </div>
+        <nav class="sidebar-menu" aria-label="Side menu">
+          <a href="profile.html">Profile</a>
+          <a href="setting.html">Settings</a>
+        </nav>
+        <a class="sidebar-exit" href="splashscreen.html">Exit</a>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

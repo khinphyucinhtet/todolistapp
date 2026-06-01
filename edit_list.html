@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Edit List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="edit">
+    <main class="app-frame">
+      <section class="screen">
+        <header class="app-header">
+          <a class="header-link" href="view_list.html" aria-label="Back">←</a>
+          <span class="header-title">Edit List</span>
+          <button class="icon-button" type="button" data-delete-task aria-label="Delete task">🗑</button>
+        </header>
+
+        <div class="screen-content">
+          <form id="edit-task-form" class="form-card">
+            <div class="field-group">
+              <label class="field-label" for="edit-title">List Title</label>
+              <input class="input-control" id="edit-title" type="text" required />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="edit-description">Description <span>(Optional)</span></label>
+              <textarea
+                class="textarea-control"
+                id="edit-description"
+                maxlength="100"
+                placeholder="Tasks to complete my daily routine"
+                data-description-input
+                data-counter-id="edit-description-count"
+              ></textarea>
+              <div class="char-counter" id="edit-description-count">0/100</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="edit-due-date">Due Date <span>(Optional)</span></label>
+              <input class="date-control" id="edit-due-date" type="date" />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="edit-category">Category</label>
+              <select class="select-control" id="edit-category">
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Work">Work</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <div class="section-label">Priority Level</div>
+              <div class="priority-panel" data-priority-group>
+                <input type="hidden" id="edit-priority-input" data-priority-input value="Moderate" />
+
+                <label class="priority-option" data-priority="Emergency">
+                  <input type="radio" name="edit-priority" value="Emergency" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--red)"></span>
+                    <span class="priority-copy">
+                      <strong>Emergency</strong>
+                      <span>Highest priority - Do it now</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Very Urgent">
+                  <input type="radio" name="edit-priority" value="Very Urgent" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--orange)"></span>
+                    <span class="priority-copy">
+                      <strong>Very Urgent</strong>
+                      <span>Important - Do it soon</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Moderate">
+                  <input type="radio" name="edit-priority" value="Moderate" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--yellow)"></span>
+                    <span class="priority-copy">
+                      <strong>Moderate</strong>
+                      <span>Medium priority - Plan it</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i class="filled"></i><i></i><i></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Low">
+                  <input type="radio" name="edit-priority" value="Low" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--green)"></span>
+                    <span class="priority-copy">
+                      <strong>Low</strong>
+                      <span>Not too urgent - Do it later</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i class="filled"></i><i></i><i></i><i></i>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="priority-option" data-priority="Very Low">
+                  <input type="radio" name="edit-priority" value="Very Low" />
+                  <span class="priority-row">
+                    <span class="priority-color" style="background: var(--teal)"></span>
+                    <span class="priority-copy">
+                      <strong>Very Low</strong>
+                      <span>Whenever possible</span>
+                    </span>
+                    <span class="priority-dots" aria-hidden="true">
+                      <i class="filled"></i><i></i><i></i><i></i><i></i>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <button class="primary-button" type="submit">Update List</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

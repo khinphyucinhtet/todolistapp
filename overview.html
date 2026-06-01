@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Task Overview</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="overview">
+    <main class="app-frame">
+      <section class="screen" data-overview-root>
+        <header class="app-header">
+          <a class="header-link" href="home.html" aria-label="Back">←</a>
+          <span class="header-title">Task Overview</span>
+          <span class="header-link" aria-hidden="true">🗂</span>
+        </header>
+
+        <div class="screen-content">
+          <section>
+            <h2 class="overview-section-title">Overall Summary</h2>
+            <div class="summary-grid">
+              <article class="summary-card summary-green">
+                <span class="label label-green">Completed</span>
+                <span class="value value-green" data-overview-completed>0</span>
+              </article>
+              <article class="summary-card summary-yellow">
+                <span class="label label-yellow">In Progress</span>
+                <span class="value value-yellow" data-overview-progress>0</span>
+              </article>
+              <article class="summary-card summary-blue">
+                <span class="label label-blue">Not Done</span>
+                <span class="value value-blue" data-overview-not-done>0</span>
+              </article>
+              <article class="summary-card summary-red">
+                <span class="label label-red">Failed</span>
+                <span class="value value-red" data-overview-failed>0</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="weekly-summary-card" data-weekly-summary></section>
+
+          <section>
+            <h2 class="overview-section-title">Progress Chart</h2>
+            <div class="overview-layout">
+              <div class="donut-wrap">
+                <div class="donut-chart" data-donut-chart aria-hidden="true">
+                  <div class="donut-center">
+                    <strong data-overview-total>0</strong>
+                    <span>Total Tasks</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="legend-list" aria-label="Chart legend">
+                <div class="legend-item"><span class="legend-dot legend-green"></span><span data-legend-completed>Completed (0)</span></div>
+                <div class="legend-item"><span class="legend-dot legend-yellow"></span><span data-legend-progress>In Progress (0)</span></div>
+                <div class="legend-item"><span class="legend-dot legend-blue"></span><span data-legend-not-done>Not Done (0)</span></div>
+                <div class="legend-item"><span class="legend-dot legend-red"></span><span data-legend-failed>Failed (0)</span></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Bottom navigation">
+          <a class="nav-item" data-nav="home" href="home.html">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-nav="lists" href="view_list.html">
+            <span class="nav-icon" aria-hidden="true">☷</span>
+            <span>Lists</span>
+          </a>
+          <a class="nav-item" data-nav="calendar" href="calendar.html">
+            <span class="nav-icon" aria-hidden="true">🗓</span>
+            <span>Calendar</span>
+          </a>
+          <a class="nav-item" data-nav="profile" href="profile.html">
+            <span class="nav-icon" aria-hidden="true">👤</span>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

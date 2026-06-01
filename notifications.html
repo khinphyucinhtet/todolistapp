@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Notifications</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="notifications">
+    <main class="app-frame">
+      <section class="screen">
+        <header class="app-header">
+          <a class="header-link" href="home.html" aria-label="Back">←</a>
+          <span class="header-title">Notifications</span>
+          <a class="header-link" href="setting.html" aria-label="Notification settings">⚙</a>
+        </header>
+
+        <div class="screen-content">
+          <h2 class="overview-section-title">Upcoming Reminders</h2>
+          <section class="notification-list" data-notification-list aria-live="polite"></section>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Bottom navigation">
+          <a class="nav-item" data-nav="home" href="home.html">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-nav="lists" href="view_list.html">
+            <span class="nav-icon" aria-hidden="true">☷</span>
+            <span>Lists</span>
+          </a>
+          <a class="nav-item" data-nav="calendar" href="calendar.html">
+            <span class="nav-icon" aria-hidden="true">🗓</span>
+            <span>Calendar</span>
+          </a>
+          <a class="nav-item" data-nav="profile" href="profile.html">
+            <span class="nav-icon" aria-hidden="true">👤</span>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

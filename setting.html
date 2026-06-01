@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="settings">
+    <main class="app-frame">
+      <section class="screen">
+        <header class="app-header">
+          <a class="header-link" href="home.html" aria-label="Back">←</a>
+          <span class="header-title">Settings</span>
+          <span class="header-link" aria-hidden="true">⚙</span>
+        </header>
+
+        <div class="screen-content">
+          <section class="settings-card">
+            <h2>Language</h2>
+            <select class="select-control" data-language-select aria-label="Language">
+              <option value="English">English</option>
+              <option value="Chinese">Chinese</option>
+            </select>
+            <button class="settings-save-button" type="button" data-save-language>Save Language</button>
+          </section>
+
+          <section class="settings-card">
+            <div class="settings-row">
+              <div>
+                <h2>Notification Setting</h2>
+                <p>Allow deadline and urgent task reminders</p>
+                <small class="settings-help-text" data-notification-status>Browser permission not checked yet.</small>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" data-notification-toggle />
+                <span></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="settings-card app-info-card">
+            <h2>App Information</h2>
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p><strong>About:</strong> Your Best Reminder App helps users organize tasks, track priorities, and monitor progress in a simple way.</p>
+            <p><strong>Contact Us:</strong> phyusn6@gmail.com</p>
+          </section>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Bottom navigation">
+          <a class="nav-item" data-nav="home" href="home.html">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-nav="lists" href="view_list.html">
+            <span class="nav-icon" aria-hidden="true">☷</span>
+            <span>Lists</span>
+          </a>
+          <a class="nav-item" data-nav="calendar" href="calendar.html">
+            <span class="nav-icon" aria-hidden="true">🗓</span>
+            <span>Calendar</span>
+          </a>
+          <a class="nav-item" data-nav="profile" href="profile.html">
+            <span class="nav-icon" aria-hidden="true">👤</span>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Daily Tasks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="lists">
+    <main class="app-frame">
+      <section class="screen">
+        <header class="app-header">
+          <a class="header-link" href="home.html" aria-label="Back">←</a>
+          <span class="header-title">Daily Tasks</span>
+          <span class="header-link" aria-hidden="true">⋮</span>
+        </header>
+
+        <div class="screen-content">
+          <section class="panel">
+            <div class="progress-head">
+              <h2 class="progress-title">Progress</h2>
+              <span class="progress-percent" data-progress-percent>60%</span>
+            </div>
+            <div class="progress-bar" aria-label="Task progress">
+              <div class="progress-value" data-progress-fill style="width: 60%"></div>
+            </div>
+          </section>
+
+          <section class="list-head">
+            <div class="task-headline">
+              <h2 class="tasks-title">Tasks</h2>
+              <a class="add-task-link" href="create_list.html">+ Add Task</a>
+            </div>
+            <div class="task-search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="task-search" type="search" placeholder="Search active tasks..." aria-label="Search active tasks" data-task-search />
+            </div>
+            <div class="filter-row" data-filter-row aria-label="Task filters">
+              <button class="filter-btn active" type="button" data-filter="All">All</button>
+              <button class="filter-btn" type="button" data-filter="Study">Study</button>
+              <button class="filter-btn" type="button" data-filter="Personal">Personal</button>
+              <button class="filter-btn" type="button" data-filter="Shopping">Shopping</button>
+              <button class="filter-btn" type="button" data-filter="Work">Work</button>
+            </div>
+          </section>
+
+          <section class="completed-action-panel hidden" data-pending-summary aria-live="polite"></section>
+          <section class="task-list" id="task-list" aria-live="polite"></section>
+          <p class="list-note">Tasks are sorted by priority and deadline.</p>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Bottom navigation">
+          <a class="nav-item" data-nav="home" href="home.html">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-nav="lists" href="view_list.html">
+            <span class="nav-icon" aria-hidden="true">☷</span>
+            <span>Lists</span>
+          </a>
+          <a class="nav-item" data-nav="calendar" href="calendar.html">
+            <span class="nav-icon" aria-hidden="true">🗓</span>
+            <span>Calendar</span>
+          </a>
+          <a class="nav-item" data-nav="profile" href="profile.html">
+            <span class="nav-icon" aria-hidden="true">👤</span>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

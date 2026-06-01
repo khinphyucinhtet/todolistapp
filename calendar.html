@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Best Reminder App | Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="calendar">
+    <main class="app-frame">
+      <section class="screen" data-calendar-root>
+        <header class="app-header">
+          <a class="header-link" href="home.html" aria-label="Back">←</a>
+          <span class="header-title">Calendar</span>
+          <span class="header-link" aria-hidden="true">🗓</span>
+        </header>
+
+        <div class="screen-content">
+          <section class="calendar-shell">
+            <div class="calendar-toolbar">
+              <button class="calendar-nav-button" type="button" data-calendar-prev aria-label="Previous month">‹</button>
+              <div class="calendar-selectors">
+                <select class="select-control" data-calendar-month aria-label="Month"></select>
+                <select class="select-control" data-calendar-year aria-label="Year"></select>
+              </div>
+              <button class="calendar-nav-button" type="button" data-calendar-next aria-label="Next month">›</button>
+            </div>
+
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>Sun</span>
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+            </div>
+
+            <div class="calendar-grid" data-calendar-grid aria-label="Monthly calendar"></div>
+          </section>
+
+          <section class="calendar-task-list">
+            <h2 class="overview-section-title" data-selected-date-label>Selected Date</h2>
+            <div data-selected-date-tasks></div>
+          </section>
+        </div>
+
+        <nav class="bottom-nav" aria-label="Bottom navigation">
+          <a class="nav-item" data-nav="home" href="home.html">
+            <span class="nav-icon" aria-hidden="true">⌂</span>
+            <span>Home</span>
+          </a>
+          <a class="nav-item" data-nav="lists" href="view_list.html">
+            <span class="nav-icon" aria-hidden="true">☷</span>
+            <span>Lists</span>
+          </a>
+          <a class="nav-item" data-nav="calendar" href="calendar.html">
+            <span class="nav-icon" aria-hidden="true">🗓</span>
+            <span>Calendar</span>
+          </a>
+          <a class="nav-item" data-nav="profile" href="profile.html">
+            <span class="nav-icon" aria-hidden="true">👤</span>
+            <span>Profile</span>
+          </a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
