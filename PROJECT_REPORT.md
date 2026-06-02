@@ -545,8 +545,11 @@ Desktop behavior:
 Mobile behavior:
 
 - App fills the screen width.
+- The app uses the dynamic viewport unit `100dvh` so mobile browser address bars and bottom bars do not hide the footer.
+- Page content scrolls inside the app screen while the header and bottom navigation remain visible.
+- Home dashboard cards stay in two columns on normal phone widths and collapse only on very small screens.
 - Cards stack or shrink based on available width.
-- Bottom navigation stays touch-friendly.
+- Bottom navigation stays touch-friendly and includes safe-area padding for modern phones.
 - Forms, task rows, notification cards, and profile cards remain readable.
 
 CSS features used:
@@ -554,6 +557,7 @@ CSS features used:
 - CSS variables for theme colors.
 - CSS Grid and Flexbox for layouts.
 - Media queries for smaller screens.
+- Dynamic viewport sizing with `100dvh` for deployed mobile browser compatibility.
 - Border radius and shadows for card UI.
 - CSS-only donut chart.
 - Fixed phone frame with scrollable inner content.
